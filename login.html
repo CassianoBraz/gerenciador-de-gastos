@@ -5,6 +5,7 @@
 	<title>Login</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="google-signin-client_id" content="428047056702-vao4hp6sote6b4103lrtcik9nhfb4089.apps.googleusercontent.com">
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="shortcut icon" href="images/favicon.ico" />
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -61,16 +62,17 @@
 								</div>
 								<div class="col-md-12 mb-3">
 									<p class="text-center">
-										<a href="javascript:void();" class="google btn mybtn"><i class="fa fa-google-plus">
-											</i> Entre usando o Google</a>
+										<div data-onsuccess="onSignIn" class="google btn mybtn g-signin2"><i
+												class="fa fa-google-plus">
+											</i> Entre usando o Google</div>
 									</p>
 								</div>
 								<div class="form-group">
-									<p class="text-center">Caso não tenha cadastro? <a href="#" id="signup">Click aqui!</a>
+									<p class="text-center">Caso não tenha cadastro? <a href="#" id="signup">Click
+											aqui!</a>
 									</p>
 								</div>
 							</form>
-
 						</div>
 					</div>
 					<div id="second">
@@ -101,9 +103,11 @@
 									<input type="password" name="password" id="password" class="form-control"
 										aria-describedby="emailHelp" placeholder="Digite uma senha">
 								</div>
-								<p class="text-center">Se cadastrando você aceita nossos <a href="termos.html">Termos de uso</a></p>
+								<p class="text-center">Se cadastrando você aceita nossos <a href="termos.html">Termos de
+										uso</a></p>
 								<div class="col-md-12 text-center mb-3">
-									<button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Cadastrar</button>
+									<button type="submit"
+										class=" btn btn-block mybtn btn-primary tx-tfm">Cadastrar</button>
 								</div>
 								<div class="col-md-12 ">
 									<div class="form-group">
@@ -138,6 +142,7 @@
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
 
 </body>
 

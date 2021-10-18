@@ -40,7 +40,7 @@
 	$(
 		'<div id="titleBar">' +
 		'<a href="#navPanel" class="toggle"></a>' +
-		'<span class="title">' + $('#logo').html() + '</span>' +
+		'<span class="title">'+''+'</span>' +
 		'</div>'
 	)
 		.appendTo($body);
@@ -137,3 +137,21 @@ $(function () {
 		}
 	});
 });
+function onSignIn(googleUser) {
+	console.log("oi")
+	var profile = googleUser.getBasicProfile();
+	$("#name").text(profile.getName());
+	$("#email").text(profile.getEmail());
+	$("#image").attr('src', profile.getImageUrl());
+	$(".data").css("display", "block");
+	$(".g-signin2").css("display", "none");
+}
+
+function signOut() {
+	var auth2 = gapi.auth2.getAuthInstance();
+	auth2.signOut().then(function () {
+		alert("You have been signed out successfully");
+		$(".data").css("display", "none");
+		$(".g-signin2").css("display", "block");
+	});
+}
