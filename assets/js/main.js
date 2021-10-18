@@ -138,14 +138,13 @@ $(function () {
 	});
 });
 function onSignIn(googleUser) {
-	console.log("oi")
 	var profile = googleUser.getBasicProfile();
 	$("#name").text(profile.getName());
 	$("#email").text(profile.getEmail());
 	$("#image").attr('src', profile.getImageUrl());
 	$(".data").css("display", "block");
 	$(".g-signin2").css("display", "none");
-	window.location.href = "/master/dasboard.html";
+	window.location.href = "/gerenciador-de-gastos/master/dashboard.html";
 }
 
 function signOut() {
