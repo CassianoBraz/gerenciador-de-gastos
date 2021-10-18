@@ -145,7 +145,7 @@ function onSignIn(googleUser) {
 	$("#image").attr('src', profile.getImageUrl());
 	$(".data").css("display", "block");
 	$(".g-signin2").css("display", "none");
-	window.location.href = "/pos_login/index.html";
+	window.location.href = "/master/dasboard.html";
 }
 
 function signOut() {
