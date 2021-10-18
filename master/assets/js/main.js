@@ -128,4 +128,5 @@ function signOut() {
 		$(".data").css("display", "none");
 		$(".g-signin2").css("display", "block");
 	});
+	window.location.href = "/gerenciador-de-gastos/login.html";
 }
