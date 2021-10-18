@@ -3322,7 +3322,7 @@ h3 {
 	text-align: center;
 	outline: none;
 	border: 1px solid lightgrey;
-	display: flex;
+	display: flex !important;
 	align-items: center;
 	justify-content: center;
 }
