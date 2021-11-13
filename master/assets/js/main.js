@@ -1,9 +1,3 @@
-/*
-	Prologue by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 (function ($) {
 
 	var $window = $(window),
@@ -121,3 +115,17 @@
 		});
 
 })(jQuery);
+
+(function () {
+	let token = localStorage.getItem('token');
+
+	if(!token){
+		window.location.href = '/login.html'
+	}
+
+	const {name, email} = JSON.parse(localStorage.getItem('user'))
+
+	document.querySelector("#title").innerHTML = name
+	document.querySelector("#email").innerHTML = email
+
+})();

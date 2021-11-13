@@ -5,7 +5,8 @@
 	<title>Login</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<meta name="google-signin-client_id" content="428047056702-vao4hp6sote6b4103lrtcik9nhfb4089.apps.googleusercontent.com">
+	<meta name="google-signin-client_id"
+		content="428047056702-vao4hp6sote6b4103lrtcik9nhfb4089.apps.googleusercontent.com">
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="shortcut icon" href="images/favicon.ico" />
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -35,7 +36,7 @@
 									<h1>Login</h1>
 								</div>
 							</div>
-							<form >
+							<div>
 								<div class="form-group">
 									<label for="email">E-mail</label>
 									<input type="email" name="email" class="form-control" id="email"
@@ -43,13 +44,14 @@
 								</div>
 								<div class="form-group">
 									<label for="password">Senha</label>
-									<input type="password" name="password" id="password" class="form-control"
-										aria-describedby="emailHelp" placeholder="Digite a senha" required>
+									<input type="password" name="password" id="password" autocomplete="on"
+										class="form-control" aria-describedby="emailHelp" placeholder="Digite a senha"
+										required>
 								</div>
 								<div class="form-group">
 								</div>
 								<div class="col-md-12 text-center ">
-									<button class=" btn btn-block mybtn btn-primary tx-tfm" onClick="login()">Login</button>
+									<button class=" btn btn-block mybtn btn-primary tx-tfm" id="loginButton">Login</button>
 								</div>
 								<div class="col-md-12 ">
 									<div class="login-or">
@@ -62,7 +64,8 @@
 											aqui!</a>
 									</p>
 								</div>
-							</form>
+							</div>
+							
 						</div>
 					</div>
 					<div id="second">
@@ -85,8 +88,9 @@
 								</div>
 								<div class="form-group">
 									<label for="pass_cad">Senha</label>
-									<input type="password" name="pass_cad" id="pass_cad" class="form-control"
-										aria-describedby="emailHelp" placeholder="Digite uma senha">
+									<input type="password" name="pass_cad" id="pass_cad" autocomplete="on"
+										class="form-control" aria-describedby="emailHelp"
+										placeholder="Digite uma senha">
 								</div>
 								<p class="text-center">Se cadastrando você aceita nossos <a href="termos.html">Termos de
 										uso</a></p>
@@ -128,10 +132,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+<script src="assets/js/authorization.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="assets/js/authorization.js"></script>
+
 
 </body>
 

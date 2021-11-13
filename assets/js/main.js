@@ -126,24 +126,5 @@ $(function () {
 	});
 });
 
-const login = async () => {
-	const email = document.querySelector("#email").value
-	const password = document.querySelector("#password").value
 
-	if (email && password) {
-	    try {
-	        const response = await axios.post(`${baseURL}/sessions`, {
-	            email: email,
-	            password: password
-	        })
-	        console.log(response)
-	    } catch (err) { 
-	        console.log(err)
-	    }
-
-	}else{
-	    console.log('digita saporra direito')
-	}
-
-}
 
