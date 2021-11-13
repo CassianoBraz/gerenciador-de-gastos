@@ -66,18 +66,6 @@
 		});
 
 })(jQuery);
-$("#signup").click(function () {
-	$("#first").fadeOut("fast", function () {
-		$("#second").fadeIn("fast");
-	});
-});
-
-$("#signin").click(function () {
-	$("#second").fadeOut("fast", function () {
-		$("#first").fadeIn("fast");
-	});
-});
-
 $(function () {
 	$("form[name='login']").validate({
 		rules: {
@@ -101,7 +89,7 @@ $(function () {
 
 		},
 		submitHandler: function (form) {
-			form.submit();
+			console.log('oi')
 		}
 	});
 });
@@ -137,13 +125,25 @@ $(function () {
 		}
 	});
 });
-function onSignIn(googleUser) {
-	var profile = googleUser.getBasicProfile();
-	$("#name").text(profile.getName());
-	$("#email").text(profile.getEmail());
-	$("#image").attr('src', profile.getImageUrl());
-	$(".data").css("display", "block");
-	$(".g-signin2").css("display", "none");
-	window.location.href = "/gerenciador-de-gastos/master/dashboard.html";
+
+const login = async () => {
+	const email = document.querySelector("#email").value
+	const password = document.querySelector("#password").value
+
+	if (email && password) {
+	    try {
+	        const response = await axios.post(`${baseURL}/sessions`, {
+	            email: email,
+	            password: password
+	        })
+	        console.log(response)
+	    } catch (err) { 
+	        console.log(err)
+	    }
+
+	}else{
+	    console.log('digita saporra direito')
+	}
+
 }
 
