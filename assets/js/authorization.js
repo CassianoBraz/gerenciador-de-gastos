@@ -1,4 +1,23 @@
 const baseURL = 'https://costmanager.vinirodrigues.com'
+
+var toastMixin = Swal.mixin({
+    toast: true,
+    icon: 'success',
+    title: 'General Title',
+    animation: false,
+    position: 'top-right',
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
+  });
+
+
+
+
 const login = async (e) => {
 
     e.preventDefault
@@ -16,10 +35,20 @@ const login = async (e) => {
             const {token, user} = response.data;
             localStorage.setItem('token', token);
             localStorage.setItem('user', JSON.stringify(user));
+
+            toastMixin.fire({
+                title: 'Login realizado com sucesso!',
+                icon: 'success'
+            });
+
             window.location.href = '/master/dashboard.html'
 
-        } catch (err) {
             
+        } catch (err) {
+            toastMixin.fire({
+                title: 'Login/Senha incorretos',
+                icon: 'error'
+              });
         }
 
     } else {
