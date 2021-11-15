@@ -41,7 +41,7 @@ const login = async (e) => {
                 icon: 'success'
             });
 
-            window.location.href = '/master/dashboard.html'
+            window.location.href = '/gerenciador-de-gastos/master/dashboard.html'
 
             
         } catch (err) {
