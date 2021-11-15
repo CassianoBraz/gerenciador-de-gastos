@@ -1,3 +1,16 @@
+
+$("#signup").click(function () {
+	$("#first").fadeOut("fast", function () {
+		$("#second").fadeIn("fast");
+	});
+});
+
+$("#signin").click(function () {
+	$("#second").fadeOut("fast", function () {
+		$("#first").fadeIn("fast");
+	});
+});
+
 (function ($) {
 
 	var $window = $(window),
@@ -40,7 +53,7 @@
 	$(
 		'<div id="titleBar">' +
 		'<a href="#navPanel" class="toggle"></a>' +
-		'<span class="title">'+''+'</span>' +
+		'<span class="title">' + '' + '</span>' +
 		'</div>'
 	)
 		.appendTo($body);

@@ -19,42 +19,37 @@
 		<div class="top">
 
 			<!-- Logo -->
-			<div id="logo">
+			<div id="logo" style="margin-bottom: 10px;">
 				<h1 id="title"></h1>
 				<p id="email"></p>
 			</div>
 
 			<!-- Nav -->
+		
 			<nav id="nav">
 				<ul>
 					<li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
 					<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Dashboard</span></a>
-					<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
-					<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a>
 				</ul>
 			</nav>
 
 		</div>
 
 		<div class="bottom">
-
 			<!-- Social Icons -->
+			<div style="width: 100%; display: flex; align-items: center; justify-content: center; cursor: pointer; margin-bottom: 20px;">
+				<a style="border-bottom: 0;" id="logout"><span style="font-size: 16px; width: 100%; text-decoration: none;">Sair</span></a>
+			</div>
 			<ul class="icons">
-				<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 				<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 				<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-				<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-				<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-				<button type="button" onclick="signOut();">Sair</button>
+				<li><a href="#" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
 			</ul>
-
 		</div>
-
 	</div>
 
 	<!-- Main -->
 	<div id="main">
-
 		<!-- Intro -->
 		<section id="top" class="one dark cover">
 			<div class="container">
@@ -64,70 +59,42 @@
 				</header>
 
 				<footer>
-					<a href="#portfolio" class="button scrolly">Teste</a>
+					<a href="#portfolio" class="button scrolly">Cadastre uma nova transação.</a>
 				</footer>
+			</div>
+		</section>
+
+		<section id="transactions">
+			<div class="container">
+				<div style="display: flex; flex-direction: column; align-items: center;">
+					<div class="form-group"
+						style="display: flex; flex-direction: column; width: 350px; margin-bottom: 25px;">
+						<label for="value" style="text-align: left;">Valor</label>
+						<input type="number" name="value" class="form-control" id="value" aria-describedby="emailHelp"
+							placeholder="Digite o valor" required>
+					</div>
+					<div class="form-group" style="display: flex; flex-direction: column; width: 350px;">
+						<label for="select" style="text-align: left;">Entrada ou Saída?</label>
+						<select name="select" id="select">
+							<option value="in">Entrada</option>
+							<option value="out" selected>Saída</option>
+						</select>
+					</div>
+					<button id="newTransaction" style="margin-top: 50px">Cadastrar</button>
+				</div>
 
 			</div>
 		</section>
 
 		<!-- Portfolio -->
 		<section id="portfolio" class="two">
+			<h1 id="monthTitle"></h1>
 			<div class="container">
-
 				<div id="chart"></div>
-
 			</div>
 		</section>
-
-		<!-- About Me -->
-		<section id="about" class="three">
-			<div class="container">
-
-				<header>
-					<h2>About Me</h2>
-				</header>
-
-				<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
-
-				<p>Tincidunt eu elit diam magnis pretium accumsan etiam id urna. Ridiculus
-					ultricies curae quis et rhoncus velit. Lobortis elementum aliquet nec vitae
-					laoreet eget cubilia quam non etiam odio tincidunt montes. Elementum sem
-					parturient nulla quam placerat viverra mauris non cum elit tempus ullamcorper
-					dolor. Libero rutrum ut lacinia donec curae mus vel quisque sociis nec
-					ornare iaculis.</p>
-
-			</div>
-		</section>
-
-		<!-- Contact -->
-		<section id="contact" class="four">
-			<div class="container">
-
-				<header>
-					<h2>Contact</h2>
-				</header>
-
-				<p>mcorper dolor. Libero rutrum ut lacinia
-					donec curae mus. Eleifend id porttitor ac ultricies lobortis sem nunc
-					orci ridiculus faucibus a consectetur. Porttitor curae mauris urna mi dolor.</p>
-
-				<form method="post" action="#">
-					<div class="row">
-						<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
-						<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
-						<div class="col-12">
-							<textarea name="message" placeholder="Message"></textarea>
-						</div>
-						<div class="col-12">
-							<input type="submit" value="Send Message" />
-						</div>
-					</div>
-				</form>
-
-			</div>
-		</section>
-
 	</div>
+
 
 	<!-- Footer -->
 	<div id="footer">
@@ -139,17 +106,29 @@
 
 	</div>
 
+
+
+
 	<!-- Scripts -->
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.scrolly.min.js"></script>
 	<script src="assets/js/jquery.scrollex.min.js"></script>
 	<script src="assets/js/browser.min.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 	<script src="assets/js/chart.js"></script>
+
+	<script>
+		let date = new Date(Date.now())
+		document.getElementById('monthTitle').innerText = `Relatório de transações de ${date.toLocaleString('default', { month: 'long' })}`
+	</script>
+
+
+
 
 </body>
 
