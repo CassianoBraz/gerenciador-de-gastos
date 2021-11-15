@@ -120,7 +120,7 @@
 	let token = localStorage.getItem('token');
 
 	if(!token){
-		window.location.href = '/login.html'
+		window.location.href = '/gerenciador-de-gastos/login.html'
 	}
 
 	const {name, email} = JSON.parse(localStorage.getItem('user'))
