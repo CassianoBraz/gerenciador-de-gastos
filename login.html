@@ -24,87 +24,102 @@
 				</div>
 			</div>
 		</header>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-5 mx-auto">
-					<div id="first">
-						<div class="myform form ">
-							<div class="logo mb-3">
-								<div class="col-md-12 text-center">
-									<h1>Login</h1>
+
+		<!-- Nav -->
+		<nav id="nav">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="left-sidebar.html">Nossa Visão</a></li>
+				<li><a href="right-sidebar.html">Serviços</a></li>
+				<li class="current"><a href="login.html">Login</a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<section id="main">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-5 mx-auto">
+						<div id="first">
+							<div class="myform form ">
+								<div class="logo mb-3">
+									<div class="col-md-12 text-center">
+										<h1>Login</h1>
+									</div>
 								</div>
+								<div>
+									<div class="form-group">
+										<label for="email">E-mail</label>
+										<input type="email" name="email" class="form-control" id="email"
+											aria-describedby="emailHelp" placeholder="Digite seu e-mail" required>
+									</div>
+									<div class="form-group">
+										<label for="password">Senha</label>
+										<input type="password" name="password" id="password" autocomplete="on"
+											class="form-control" aria-describedby="emailHelp"
+											placeholder="Digite a senha" required>
+									</div>
+									<div class="form-group">
+									</div>
+									<div class="col-md-12 text-center ">
+										<button class=" btn btn-block mybtn btn-primary tx-tfm"
+											id="loginButton">Login</button>
+									</div>
+									<div class="col-md-12 ">
+										<div class="login-or">
+											<hr class="hr-or">
+											<span class="span-or">ou</span>
+										</div>
+									</div>
+									<div class="form-group">
+										<p class="text-center">Caso não tenha cadastro?<a href="#" id="signup">Click
+												aqui!</a>
+										</p>
+									</div>
+								</div>
+
 							</div>
-							<div>
-								<div class="form-group">
-									<label for="email">E-mail</label>
-									<input type="email" name="email" class="form-control" id="email"
-										aria-describedby="emailHelp" placeholder="Digite seu e-mail" required>
-								</div>
-								<div class="form-group">
-									<label for="password">Senha</label>
-									<input type="password" name="password" id="password" autocomplete="on"
-										class="form-control" aria-describedby="emailHelp" placeholder="Digite a senha"
-										required>
-								</div>
-								<div class="form-group">
-								</div>
-								<div class="col-md-12 text-center ">
-									<button class=" btn btn-block mybtn btn-primary tx-tfm"
-										id="loginButton">Login</button>
-								</div>
-								<div class="col-md-12 ">
-									<div class="login-or">
-										<hr class="hr-or">
-										<span class="span-or">ou</span>
+						</div>
+						<div id="second">
+							<div class="myform form ">
+								<div class="logo mb-3">
+									<div class="col-md-12 text-center">
+										<h1>Signup</h1>
 									</div>
 								</div>
 								<div class="form-group">
-									<p class="text-center">Caso não tenha cadastro?<a href="#" id="signup">Click
-											aqui!</a>
-									</p>
+									<label for="name_cad">Digite nome</label>
+									<input type="text" name="name_cad" class="form-control" id="name_cad"
+										aria-describedby="emailHelp" placeholder="Insira o nome completo">
 								</div>
-							</div>
-
-						</div>
-					</div>
-					<div id="second">
-						<div class="myform form ">
-							<div class="logo mb-3">
-								<div class="col-md-12 text-center">
-									<h1>Signup</h1>
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="name_cad">Digite nome</label>
-								<input type="text" name="name_cad" class="form-control" id="name_cad"
-									aria-describedby="emailHelp" placeholder="Insira o nome completo">
-							</div>
-							<div class="form-group">
-								<label for="email_cad">E-mail</label>
-								<input type="email" name="email_cad" class="form-control" id="email_cad"
-									aria-describedby="emailHelp" placeholder="Insira um e-mail">
-							</div>
-							<div class="form-group">
-								<label for="pass_cad">Senha</label>
-								<input type="password" name="pass_cad" id="pass_cad" autocomplete="on"
-									class="form-control" aria-describedby="emailHelp" placeholder="Digite uma senha">
-							</div>
-							<p class="text-center">Se cadastrando você aceita nossos <a href="termos.html">Termos de
-									uso</a></p>
-							<div class="col-md-12 text-center mb-3">
-								<button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm"
-									id="registerButton">Cadastrar</button>
-							</div>
-							<div class="col-md-12 ">
 								<div class="form-group">
-									<p class="text-center"><a href="#" id="signin">já tem uma conta?</a></p>
+									<label for="email_cad">E-mail</label>
+									<input type="email" name="email_cad" class="form-control" id="email_cad"
+										aria-describedby="emailHelp" placeholder="Insira um e-mail">
+								</div>
+								<div class="form-group">
+									<label for="pass_cad">Senha</label>
+									<input type="password" name="pass_cad" id="pass_cad" autocomplete="on"
+										class="form-control" aria-describedby="emailHelp"
+										placeholder="Digite uma senha">
+								</div>
+								<p class="text-center">Se cadastrando você aceita nossos <a href="termos.html">Termos de
+										uso</a></p>
+								<div class="col-md-12 text-center mb-3">
+									<button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm"
+										id="registerButton">Cadastrar</button>
+								</div>
+								<div class="col-md-12 ">
+									<div class="form-group">
+										<p class="text-center"><a href="#" id="signin">já tem uma conta?</a></p>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 
 </body>
 <!-- Nav -->
