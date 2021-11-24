@@ -25,7 +25,7 @@
 			</div>
 
 			<!-- Nav -->
-		
+
 			<nav id="nav">
 				<ul>
 					<li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
@@ -37,8 +37,10 @@
 
 		<div class="bottom">
 			<!-- Social Icons -->
-			<div style="width: 100%; display: flex; align-items: center; justify-content: center; cursor: pointer; margin-bottom: 20px;">
-				<a style="border-bottom: 0;" id="logout"><span style="font-size: 16px; width: 100%; text-decoration: none;">Sair</span></a>
+			<div
+				style="width: 100%; display: flex; align-items: center; justify-content: center; cursor: pointer; margin-bottom: 20px;">
+				<a style="border-bottom: 0;" id="logout"><span
+						style="font-size: 16px; width: 100%; text-decoration: none;">Sair</span></a>
 			</div>
 			<ul class="icons">
 				<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
@@ -59,7 +61,8 @@
 				</header>
 
 				<footer>
-					<a href="#portfolio" class="button scrolly">Cadastre uma nova transação.</a>
+					<a href="#portfolio" class="button scrolly button-confirm" style="padding-top: 10px">Cadastre uma
+						nova transação.</a>
 				</footer>
 			</div>
 		</section>
@@ -67,20 +70,49 @@
 		<section id="transactions">
 			<div class="container">
 				<div style="display: flex; flex-direction: column; align-items: center;">
-					<div class="form-group"
-						style="display: flex; flex-direction: column; width: 350px; margin-bottom: 25px;">
-						<label for="value" style="text-align: left;">Valor</label>
-						<input type="number" name="value" class="form-control" id="value" aria-describedby="emailHelp"
-							placeholder="Digite o valor" required>
+					<h1 style="font-size: 32px; ">Cadastre uma nova transação</h1>
+					<div style="display: flex; margin-top: 20px; width: 70%; flex-wrap: wrap;">
+						<div class="form-group"
+							style="display: flex; flex-direction: column; flex: 1; min-width: 200px; margin: 5px;">
+							<label for="value" style="text-align: left;">Valor</label>
+							<input type="number" name="value" class="form-control button-custom" id="value"
+								aria-describedby="emailHelp" placeholder="Digite o valor" required>
+						</div>
+						<div class="form-group"
+							style="display: flex; flex-direction: column; flex: 1; min-width: 200px; margin: 5px;">
+							<label for="description" style="text-align: left;">Descrição</label>
+							<input type="text" name="description" class="form-control button-custom" id="description"
+								aria-describedby="emailHelp" placeholder="Descrição da transação" required>
+						</div>
 					</div>
-					<div class="form-group" style="display: flex; flex-direction: column; width: 350px;">
-						<label for="select" style="text-align: left;">Entrada ou Saída?</label>
-						<select name="select" id="select">
-							<option value="in">Entrada</option>
-							<option value="out" selected>Saída</option>
+					<div
+						style="display: flex; width: 70%; margin-top: 10px; flex-wrap: wrap; justify-content: space-between;">
+						<div class="form-group"
+							style="display: flex; flex-direction: column; flex: 1; min-width: 200px; margin: 5px;">
+							<label for="select" style="text-align: left;">Tipo de transação</label>
+							<select name="select" id="select" class="button-custom">
+								<option value="in">Entrada</option>
+								<option value="out" selected>Saída</option>
+							</select>
+						</div>
+						<div class="form-group"
+							style="display: flex; flex-direction: column; flex: 1; min-width: 200px; margin: 5px;">
+							<label for="select" style="text-align: left;">Categoria</label>
+							<select name="select" id="cost_type" class="button-custom">
+								<option value="" selected disabled hidden>Escolha uma categoria</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group"
+						style="display: flex; flex-direction: column; width: 70%; margin-top: 10px; padding-left: 5px; padding-right: 5px;">
+						<label for="select" style="text-align: left; margin: 5px;">Meio de pagamento</label>
+						<select name="select" id="payment_type" class="button-custom">
+							<option value="" selected disabled hidden>Escolha uma forma de pagamento</option>
 						</select>
 					</div>
-					<button id="newTransaction" style="margin-top: 50px">Cadastrar</button>
+
+					<button id="newTransaction" class="button-confirm"
+						style="margin-top: 50px; width: 200px; font-size: 18px;">Cadastrar</button>
 				</div>
 
 			</div>
@@ -91,6 +123,17 @@
 			<h1 id="monthTitle"></h1>
 			<div class="container">
 				<div id="chart"></div>
+				<div
+					style="display: flex; width: 100%; margin-top: 40px; justify-content: space-between; flex-wrap: wrap;">
+					<div style="flex: 1; min-width: 360px; margin-right: 50px;">
+						<h1 style="margin-bottom: 50px;">Gastos por categoria</h1>
+						<div id="chart2"></div>
+					</div>
+					<div style="flex: 1; min-width: 360px; min-height: 400px;">
+						<h1 style="margin-bottom: 50px;">Utilização de meios de pagamento</h1>
+						<div id="chart3"></div>
+					</div>
+				</div>
 			</div>
 		</section>
 	</div>
