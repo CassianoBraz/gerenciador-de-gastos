@@ -2667,7 +2667,7 @@ body {
 
 #main {
 	background: #fff;
-	border-top: solid 5px #b1ddab;
+	/* border-top: solid 5px #b1ddab; */
 	border-bottom: solid 5px #c1cac5;
 	border-top-width: 35px;
 	border-bottom-width: 10px;
